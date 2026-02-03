@@ -7,3 +7,6 @@ DataEngineering projects:
 -  
 
 GenAI projects:
+
+- Health RAG chatbot: First step is to set up Databricks workspace on AWS, followed steps in this link
+  https://aws.amazon.com/blogs/awsmarketplace/start-using-databricks-data-intelligence-platform-with-aws-marketplace/
