@@ -10,6 +10,10 @@ GenAI projects:
 
 **Health RAG chatbot:** 
 
+High level architecture of the project
+
+<img width="1536" height="1024" alt="Healthchatbot_architecture" src="https://github.com/user-attachments/assets/9312dab5-111a-4ca0-a0a7-db40b24b5c59" />
+
 - First step is to set up Databricks workspace on AWS, followed steps in this link 
 https://aws.amazon.com/blogs/awsmarketplace/start-using-databricks-data-intelligence-platform-with-aws-marketplace/
 - Create S3 bucket and respective folders. Upload the sample health data into s3 folders
