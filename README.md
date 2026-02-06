@@ -22,6 +22,7 @@ Note: Once we set up Databricks workspace on AWS, AWS automatically creates a NA
 - Create S3 bucket and respective folders. Upload the sample health data into s3 folders
 - Create secret scope in Databricks, I followed the Databricks CLI way, below are the two resources used to create secret scope
   https://docs.databricks.com/aws/en/security/secrets/?language=Secrets%C2%A0utility%C2%A0%28dbutils.secrets%29
+  
   https://www.youtube.com/watch?v=N3iLq79NfvY
   
   
