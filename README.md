@@ -17,7 +17,7 @@ High level architecture of the project
 - First step is to set up Databricks workspace on AWS, followed steps in this link 
 https://aws.amazon.com/blogs/awsmarketplace/start-using-databricks-data-intelligence-platform-with-aws-marketplace/
 
-Note: Once we set up Databricks workspace on AWS, AWS automatically creates a NAT gateway which costs $0.045/hr just to exist. Even if your Databricks environment has zero clusters turned on, zero workloads running, its mere presence will result in $0.045 charged every hour. We can delete NAT Gateway when we are not using workspace for longer time, but need to check route tables are correct, DNS hasn't cached failures. If not recereated properly our cluster setup throws BOOTSTRAP_TIMEOUT / INSTANCE_INITIALIZING error.
+Note: Once we set up Databricks workspace on AWS, AWS automatically creates a NAT gateway which costs $0.045/hr just to exist. Even if your Databricks environment has zero clusters turned on, zero workloads running, its mere presence will result in $0.045 charged every hour. We can delete NAT Gateway when we are not using workspace for longer time, but need to check route tables are correct, DNS hasn't cached failures. If not recereated properly our cluster setup throws BOOTSTRAP_TIMEOUT / INSTANCE_INITIALIZING error. You will be charged for the compute as well, but while creating compute in databricks we can set autoterminate option.
 
 - Create S3 bucket and respective folders. Upload the sample health data into s3 folders
 - Create secret scope in Databricks, I followed the Databricks CLI way, below are the two resources used to create secret scope
