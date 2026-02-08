@@ -24,5 +24,7 @@ Note: Once we set up Databricks workspace on AWS, AWS automatically creates a NA
   https://docs.databricks.com/aws/en/security/secrets/?language=Secrets%C2%A0utility%C2%A0%28dbutils.secrets%29
   
   https://www.youtube.com/watch?v=N3iLq79NfvY
+
+- A job is created to ingest sample csv files from s3 to databricks bronze layer. 'ingest_healthdata_to_bronze' file is the ingestion code. A files log table is created to record file signatures (source_file + file_size + file_mod_time) if the job reruns, it skips files with signatures already marked SUCCESS.
   
   
