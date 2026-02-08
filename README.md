@@ -26,5 +26,7 @@ Note: Once we set up Databricks workspace on AWS, AWS automatically creates a NA
   https://www.youtube.com/watch?v=N3iLq79NfvY
 
 - A job is created to ingest sample csv files from s3 to databricks bronze layer. 'ingest_healthdata_to_bronze' file is the ingestion code. A files log table is created to record file signatures (source_file + file_size + file_mod_time) if the job reruns, it skips files with signatures already marked SUCCESS. We can also enable archiving for “strongest” protection.
+
+- Snapshot data profiling is created to schedule data quality monitoring. 'data_quality_monitor' notebook is created to schedule monitoring job. Data profiling provides summary statistics for a table, computing profiling metrics over time so you can easily view historical trends. It is useful for in-depth monitoring of all key metrics for select tables. You can also use it to track the performance of machine learning models and model-serving endpoints by profiling inference tables that contain model inputs and predictions.
   
   
