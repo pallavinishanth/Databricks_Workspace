@@ -32,5 +32,9 @@ Note: Once we set up Databricks workspace on AWS, AWS automatically creates a NA
 - Data cleansing is performed on all the tables. I used overwrite method for this project because data is so small, in production incremental method is used so that only the new/changed data gets cleansed and updates the table. Performed removing duplicates, normalized date formats, gender, body temperature etc.
 
 - A new job or new task can be added to the workflow to automate the data cleansing process. We can add cleansing task dependent to previous ingestion tasks so that it automate the ingestion and data cleansing process.
+
+- A dimension table 'dim_patient' is created and added to gold layer. The implementation is in 'created_dim_patient' natebook, this notebook is added as new task under workflows. This concludes setup up of all three layers.
+
+- A vector search endpoint is created manually, the creation steps are in 'vector_search_endpoint'. We have an option to create this in databricks UI as well.
   
   
