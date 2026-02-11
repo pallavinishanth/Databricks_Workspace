@@ -33,8 +33,10 @@ Note: Once we set up Databricks workspace on AWS, AWS automatically creates a NA
 
 - A new job or new task can be added to the workflow to automate the data cleansing process. We can add cleansing task dependent to previous ingestion tasks so that it automate the ingestion and data cleansing process.
 
-- A dimension table 'dim_patient' is created and added to gold layer. The implementation is in 'created_dim_patient' natebook, this notebook is added as new task under workflows. This concludes setup up of all three layers.
+- A dimension table 'dim_patient' is created and added to gold layer. The implementation is in 'created_dim_patient' natebook, this notebook is added as new task under workflows. This concludes setup up of all three layers. Here we have to create new column with all the data in the columns combined, because in later steps we use this column to create embeddings for the embedding model to use.
 
 - A vector search endpoint is created manually, the creation steps are in 'vector_search_endpoint'. We have an option to create this in databricks UI as well.
+
+- I decided to use databricks pre-configured embedding model 'databricks-bge-large-en' to create embeddings as it doesn't need to create any extra embedding model endpoint which is required for external models or some custom models to use. 'databricks-bge-large-en' is pay-per-token foundation model where we just query it.
   
   
