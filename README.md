@@ -39,6 +39,12 @@ Note: Once we set up Databricks workspace on AWS, AWS automatically creates a NA
 
 - I decided to use databricks pre-configured embedding model 'databricks-bge-large-en' to create embeddings as it doesn't need to create any extra embedding model endpoint which is required for external models or some custom models to use. 'databricks-bge-large-en' is pay-per-token foundation model where we just query it.
 
-- A vector index table 'patient_vector_table' is created from the previously created gold layer using the embedding model discussed in previous step. This table will have new column with all the embeddings. 
+- A vector index table 'patient_vector_table' is created under gold schema. To create this vector index we need to provide source table, vector search endpoint and the embedding model used to generate embeddings. After vecotr index is created a new column with embeddings appears in 'patient_vector_table'
+
+- Now its time to create an app to test our RAG pipeline. I decided to create simple Streamlit chatbot app, to do this, we have option to create one under databricks app. This creates an app under databricks-app folder. The entry point for our app is app.py file, It’s the script Databricks runs to start your UI and wire it to platform services like Vector Search and Model Serving. Under 'App resources' make sure to add your vector search index and serving end point.
+    Note: For this project I decided to use Databricks hosted serving endpoint 'databricks-meta-llama-3-1-405b-instruct', if you want to use some different llm's for your inference you can create custom serving endpoint.
+  
+- That's it, once we deploy this app we will be taken to the new website with our chatbot. Try it with some prompts and verify your results.
+  
   
   
