@@ -38,5 +38,7 @@ Note: Once we set up Databricks workspace on AWS, AWS automatically creates a NA
 - A vector search endpoint is created manually, the creation steps are in 'vector_search_endpoint'. We have an option to create this in databricks UI as well.
 
 - I decided to use databricks pre-configured embedding model 'databricks-bge-large-en' to create embeddings as it doesn't need to create any extra embedding model endpoint which is required for external models or some custom models to use. 'databricks-bge-large-en' is pay-per-token foundation model where we just query it.
+
+- A vector index table 'patient_vector_table' is created from the previously created gold layer using the embedding model discussed in previous step. This table will have new column with all the embeddings. 
   
   
