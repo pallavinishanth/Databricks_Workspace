@@ -45,6 +45,8 @@ Note: Once we set up Databricks workspace on AWS, AWS automatically creates a NA
     Note: For this project I decided to use Databricks hosted serving endpoint 'databricks-meta-llama-3-1-405b-instruct', if you want to use some different llm's for your inference you can create custom serving endpoint.
   
 - That's it, once we deploy this app we will be taken to the new website with our chatbot. Try it with some prompts and verify your results.
+
+  "One last most important thing i want to mention here is about query_type parameter in method w.vector_search_indexes.query_index(). If you do NOT explicitly pass query_type, Databricks defaults to: ANN (Approximate Nearest Neighbor) which is great for conceptual questions and information retreivals but it doesn't work for exact match of patient_id lookups. There is another type which is "FULL_TEXT" useful for exact or near-exact string look up. In this project i used Hybrid meaning, when the query has patient id in it i am using FULL_TEXT if not ANN".
   
   
   
