@@ -12,7 +12,7 @@ GenAI projects:
 
 High level architecture of the project
 
-<img width="1536" height="1024" alt="Healthchatbot_architecture" src="https://github.com/user-attachments/assets/9312dab5-111a-4ca0-a0a7-db40b24b5c59" />
+<img width="1536" height="1024" alt="Chatbot_Architecture" src="https://github.com/user-attachments/assets/427b09e4-3365-41d9-bcbf-b7fe73c86f23" />
 
 - First step is to set up Databricks workspace on AWS, followed steps in this link 
 https://aws.amazon.com/blogs/awsmarketplace/start-using-databricks-data-intelligence-platform-with-aws-marketplace/
