@@ -48,7 +48,7 @@ Note: Once we set up Databricks workspace on AWS, AWS automatically creates a NA
 
   "One last most important thing i want to mention here is about query_type parameter in method w.vector_search_indexes.query_index(). If you do NOT explicitly pass query_type, Databricks defaults to: ANN (Approximate Nearest Neighbor) which is great for conceptual questions and information retreivals but it doesn't work for exact match of patient_id lookups. There is another type which is "FULL_TEXT" useful for exact or near-exact string look up. In this project i used Hybrid meaning, when the query has patient id in it i am using FULL_TEXT if not ANN".
   
-_References:_ \
+_References:_\
 https://docs.databricks.com/aws/en/vector-search/create-vector-search\
 https://docs.databricks.com/aws/en/machine-learning/model-serving/score-foundation-models\
 https://docs.databricks.com/aws/en/machine-learning/model-serving/create-manage-serving-endpoints\
